@@ -76,7 +76,7 @@ func (s *Server) ServeTLS(listenAddr string, tlsCrt, tlsKey string) error {
 	config := &tls.Config{Certificates: []tls.Certificate{cert}}
 	listener, err = tls.Listen("tcp", listenAddr, config)
 	if err != nil {
-		golog.Error("Listen rtsp tls failed.", golog.String("err", err.Error()))
+		//.Error("Listen rtsp tls failed.", golog.String("err", err.Error()))
 		return fmt.Errorf("Listen rtsp tls failed, %s", err.Error())
 	}
 
