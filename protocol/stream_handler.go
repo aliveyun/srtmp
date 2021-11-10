@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/protocol/core"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/protocol/core"
 )
 
 //StreamHandler 管理RtmpStream，每个RtmpStream代表一路流

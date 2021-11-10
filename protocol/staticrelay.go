@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/fabo871218/srtmp/av"
-	"github.com/fabo871218/srtmp/configure"
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/protocol/core"
+	"github.com/aliveyun/srtmp/av"
+	"github.com/aliveyun/srtmp/configure"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/protocol/core"
 )
 
 type StaticPush struct {

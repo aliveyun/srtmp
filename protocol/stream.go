@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fabo871218/srtmp/av"
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/protocol/cache"
-	"github.com/fabo871218/srtmp/utils"
+	"github.com/aliveyun/srtmp/av"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/protocol/cache"
+	"github.com/aliveyun/srtmp/utils"
 )
 
 // StreamInfo ...

@@ -6,10 +6,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/protocol"
-	"github.com/fabo871218/srtmp/protocol/core"
-	"registry.code.tuya-inc.top/TuyaBEMiddleWare/golib/golog"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/protocol"
+	"github.com/aliveyun/srtmp/protocol/core"
+	//"registry.code.tuya-inc.top/TuyaBEMiddleWare/golib/golog"
 )
 
 //Server rtmpfuwu

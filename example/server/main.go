@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/fabo871218/srtmp"
+	"github.com/aliveyun/srtmp"
 )
 
 // import (
@@ -15,10 +15,10 @@ import (
 // 	"time"
 
 // 	"registry.code.tuya-inc.top/TuyaBEMiddleWare/glog"
-// 	"github.com/fabo871218/srtmp/hls"
-// 	"github.com/fabo871218/srtmp/httpflv"
-// 	"github.com/fabo871218/srtmp/httpopera"
-// 	"github.com/fabo871218/srtmp/protocol"
+// 	"github.com/aliveyun/srtmp/hls"
+// 	"github.com/aliveyun/srtmp/httpflv"
+// 	"github.com/aliveyun/srtmp/httpopera"
+// 	"github.com/aliveyun/srtmp/protocol"
 // )
 
 // var (

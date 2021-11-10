@@ -3,7 +3,7 @@ package ts
 import (
 	"io"
 
-	"github.com/fabo871218/srtmp/av"
+	"github.com/aliveyun/srtmp/av"
 )
 
 const (

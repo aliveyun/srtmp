@@ -6,10 +6,10 @@
 // 	"fmt"
 // 	"time"
 
-// 	"github.com/fabo871218/srtmp/av"
-// 	"github.com/fabo871218/srtmp/container/flv"
-// 	"github.com/fabo871218/srtmp/container/ts"
-// 	parser "github.com/fabo871218/srtmp/media"
+// 	"github.com/aliveyun/srtmp/av"
+// 	"github.com/aliveyun/srtmp/container/flv"
+// 	"github.com/aliveyun/srtmp/container/ts"
+// 	parser "github.com/aliveyun/srtmp/media"
 // )
 
 // const (

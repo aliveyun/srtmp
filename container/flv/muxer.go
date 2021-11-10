@@ -7,9 +7,9 @@ package flv
 // 	"strings"
 // 	"time"
 
-// 	"github.com/fabo871218/srtmp/av"
-// 	"github.com/fabo871218/srtmp/protocol/amf"
-// 	"github.com/fabo871218/srtmp/utils"
+// 	"github.com/aliveyun/srtmp/av"
+// 	"github.com/aliveyun/srtmp/protocol/amf"
+// 	"github.com/aliveyun/srtmp/utils"
 // )
 
 // var (

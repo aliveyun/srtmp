@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fabo871218/srtmp"
-	"github.com/fabo871218/srtmp/av"
+	"github.com/aliveyun/srtmp"
+	"github.com/aliveyun/srtmp/av"
 )
 
 var startCode []byte = []byte{0x00, 0x00, 0x00, 0x01}

@@ -10,9 +10,9 @@ import (
 	neturl "net/url"
 	"strings"
 
-	"github.com/fabo871218/srtmp/av"
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/protocol/amf"
+	"github.com/aliveyun/srtmp/av"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/protocol/amf"
 )
 
 var (

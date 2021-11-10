@@ -1,6 +1,6 @@
 package srtmp
 
-import "github.com/fabo871218/srtmp/logger"
+import "github.com/aliveyun/srtmp/logger"
 
 //SettingFunc ...
 type SettingFunc func(*SettingEngine)

@@ -3,7 +3,7 @@ package utils
 import (
 	"sync"
 
-	"github.com/fabo871218/srtmp/av"
+	"github.com/aliveyun/srtmp/av"
 )
 
 // Queue is a basic FIFO queue for Messages.

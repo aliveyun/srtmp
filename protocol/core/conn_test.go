@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/fabo871218/srtmp/utils"
+	"github.com/aliveyun/srtmp/utils"
 )
 
 func TestConnReadNormal(t *testing.T) {

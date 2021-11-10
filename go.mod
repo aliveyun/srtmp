@@ -1,4 +1,4 @@
-module github.com/fabo871218/srtmp
+module github.com/aliveyun/srtmp
 
 go 1.13
 

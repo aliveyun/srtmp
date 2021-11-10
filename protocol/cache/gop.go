@@ -1,7 +1,7 @@
 package cache
 
 import (
-	"github.com/fabo871218/srtmp/av"
+	"github.com/aliveyun/srtmp/av"
 )
 
 // GopCache ...

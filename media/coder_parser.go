@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/fabo871218/srtmp/av"
-	"github.com/fabo871218/srtmp/media/aac"
-	"github.com/fabo871218/srtmp/media/h264"
-	"github.com/fabo871218/srtmp/media/mp3"
+	"github.com/aliveyun/srtmp/av"
+	"github.com/aliveyun/srtmp/media/aac"
+	"github.com/aliveyun/srtmp/media/h264"
+	"github.com/aliveyun/srtmp/media/mp3"
 )
 
 var (

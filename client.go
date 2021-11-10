@@ -5,13 +5,12 @@ import (
 	"encoding/binary"
 	"fmt"
 	"io"
-
-	"github.com/fabo871218/srtmp/av"
-	"github.com/fabo871218/srtmp/container/flv"
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/media/h264"
-	"github.com/fabo871218/srtmp/protocol/amf"
-	"github.com/fabo871218/srtmp/protocol/core"
+	"github.com/aliveyun/srtmp/av"
+	"github.com/aliveyun/srtmp/container/flv"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/media/h264"
+	"github.com/aliveyun/srtmp/protocol/amf"
+	"github.com/aliveyun/srtmp/protocol/core"
 )
 
 //RtmpClient ...

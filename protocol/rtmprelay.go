@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/fabo871218/srtmp/logger"
-	"github.com/fabo871218/srtmp/protocol/amf"
-	"github.com/fabo871218/srtmp/protocol/core"
+	"github.com/aliveyun/srtmp/logger"
+	"github.com/aliveyun/srtmp/protocol/amf"
+	"github.com/aliveyun/srtmp/protocol/core"
 )
 
 var (
