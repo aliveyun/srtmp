@@ -4,7 +4,6 @@ import (
 	"crypto/tls"
 	"fmt"
 	"net"
-	"time"
 
 	"github.com/aliveyun/srtmp/logger"
 	"github.com/aliveyun/srtmp/protocol"
@@ -15,7 +14,7 @@ import (
 //Server rtmpfuwu
 type Server struct {
 	handler *protocol.StreamHandler
-	logger  logger.Logger
+	logger.Logger
 }
 
 //NewRtmpServer 创建一个rtmp服务
@@ -30,7 +29,7 @@ func NewRtmpServer(h *protocol.StreamHandler, log logger.Logger) *Server {
 func (s *Server) Serve(listenAddr string) (err error) {
 	defer func() {
 		if r := recover(); r != nil {
-			s.logger.Errorf("rtmp server panic:%v", r)
+			//s.logger.Errorf("rtmp server panic:%v", r)
 		}
 	}()
 	var listener net.Listener
@@ -38,23 +37,23 @@ func (s *Server) Serve(listenAddr string) (err error) {
 	if err != nil {
 		err = fmt.Errorf("net.Listen failed, %v", err)
 	}
-	s.logger.Infof("Start rtmp server, listen on:%s", listenAddr)
+	//s.logger.Infof("Start rtmp server, listen on:%s", listenAddr)
 	for {
 		var netconn net.Conn
 		netconn, err = listener.Accept()
 		if err != nil {
 			if ne, ok := err.(net.Error); ok && ne.Temporary() {
 				//如果时临时错误，sleep一段时间继续
-				s.logger.Warn("Accept failed, temporary error, try again...")
-				time.Sleep(time.Millisecond * 100)
+				//s.logger.Warn("Accept failed, temporary error, try again...")
+				//time.Sleep(time.Millisecond * 100)
 				continue
 			}
-			s.logger.Errorf("Accept failed, err:%s", err.Error())
+			//s.logger.Errorf("Accept failed, err:%s", err.Error())
 			return
 		}
 		rtmpConn := core.NewRtmpConn(netconn, 4*1024)
-		s.logger.Infof("New rtmp connect, remote:%s local:%s",
-			rtmpConn.RemoteAddr().String(), rtmpConn.LocalAddr().String())
+		//s.logger.Infof("New rtmp connect, remote:%s local:%s",
+		//	rtmpConn.RemoteAddr().String(), rtmpConn.LocalAddr().String())
 		go s.handleConn(rtmpConn)
 	}
 }
@@ -63,7 +62,7 @@ func (s *Server) Serve(listenAddr string) (err error) {
 func (s *Server) ServeTLS(listenAddr string, tlsCrt, tlsKey string) error {
 	defer func() {
 		if r := recover(); r != nil {
-			s.logger.Errorf("rtmps server panic:%v", r)
+			//s.logger.Errorf("rtmps server panic:%v", r)
 		}
 	}()
 
@@ -87,15 +86,15 @@ func (s *Server) ServeTLS(listenAddr string, tlsCrt, tlsKey string) error {
 		if err != nil {
 			if ne, ok := err.(net.Error); ok && ne.Temporary() {
 				//如果时临时错误，sleep一段时间继续
-				s.logger.Warn("Accept failed, temporary error, try again...")
-				time.Sleep(time.Millisecond * 100)
+				//s.logger.Warn("Accept failed, temporary error, try again...")
+				//time.Sleep(time.Millisecond * 100)
 				continue
 			}
 			return fmt.Errorf("Accept failed, %s", err.Error())
 		}
 		rtmpConn := core.NewRtmpConn(netconn, 4*1024)
-		s.logger.Infof("New rtmp connect, remote:%s local:%s",
-			rtmpConn.RemoteAddr().String(), rtmpConn.LocalAddr().String())
+		//s.logger.Infof("New rtmp connect, remote:%s local:%s",
+		//rtmpConn.RemoteAddr().String(), rtmpConn.LocalAddr().String())
 		go s.handleConn(rtmpConn)
 	}
 }
@@ -109,23 +108,23 @@ func (s *Server) handleConn(rtmpConn *core.RtmpConn) {
 	}()
 
 	if err = rtmpConn.HandshakeServer(); err != nil {
-		s.logger.Errorf("HandshakeServer failed, %s", err.Error())
+		//s.logger.Errorf("HandshakeServer failed, %s", err.Error())
 		return
 	}
 	//创建一个服务端连接
 	forwardConn := core.NewForwardConnect(rtmpConn, s.logger)
 	if err = forwardConn.SetUpPlayOrPublish(); err != nil {
-		s.logger.Errorf("SetUpPlayOrPublish failed, %s", err.Error())
+		//s.logger.Errorf("SetUpPlayOrPublish failed, %s", err.Error())
 		return
 	}
 	//根据appname判断流是否存在
 	//如果是publish，如果对应的流已经存在，则关闭，重新创建
 	//如果是play，如果对应的流不存在，返回错误
 	if err = s.handler.HandleConnect(forwardConn); err != nil {
-		s.logger.Errorf("Handle connect failed, %v", err)
+		//s.logger.Errorf("Handle connect failed, %v", err)
 		return
 	}
-	s.logger.Infof("Receive new connection, publisher:%v", forwardConn.IsPublisher())
+	//s.logger.Infof("Receive new connection, publisher:%v", forwardConn.IsPublisher())
 }
 
 // func (s *Server) handleConn1(rtmpConn *core.RtmpConn) {
